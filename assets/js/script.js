@@ -6,41 +6,58 @@ $("#currentDay").text(dateToday);
 for (i=9; i<=17; i++) {
     // one row
     $("<div/>", {
-        id: i,
+        id: "row"+i,
         "class": "row time-block",
     }).appendTo(".container");
     // time column
     $("<div/>", {
         "class": "col-1 hour",
         text: moment(i, "H").format("hA")
-    }).appendTo("#"+i);
+    }).appendTo("#row"+i);
     // color code event column
     if (i<currentTime) {
         $("<div/>", {
-            //id: "event"+i,
+            id: "event"+i,
             "class": "col-10 past"
-        }).appendTo("#"+i);
+        }).appendTo("#row"+i);
     } else if (i>currentTime) {
         $("<div/>", {
-            //id: "event"+i,
+            id: "event"+i,
             "class": "col-10 future" 
-        }).appendTo("#"+i);
+        }).appendTo("#row"+i);
     } else {
         $("<div/>", {
-            //id: "event"+i,
+            id: "event"+i,
             "class": "col-10 present"
-        }).appendTo("#"+i);
+        }).appendTo("#row"+i);
     }
- //   $("<input/>", {
- //       "type": "text"
- //   }).appendTo("#event"+i)
+    $("<input/>", {
+        id: i,
+        "type": "text"
+    }).appendTo("#event"+i)
     // save button
     $("<div/>", {
         id: "save"+i,
         "class": "col-1 saveBtn"
-    }).appendTo("#"+i);
+    }).appendTo("#row"+i);
     $("<i/>", {
         "class": "fas fa-save"
     }).appendTo("#save"+i);
 }
+$("i").click(saveArray);
+// check localStorage
+if (localStorage.getItem("scheduleArray")) {
+    scheduleArray = JSON.parse(localStorage.getItem("scheduleArray"));
+    for (i=9; i<=17; i++) {
+        $("#"+i).val(scheduleArray[i]);
+    }
+}
+
+function saveArray () {
+    for (i=9; i<=17; i++) {
+        scheduleArray[i] = $("#"+i).val()
+    }
+    localStorage.setItem("scheduleArray", JSON.stringify(scheduleArray));
+};
+
 
