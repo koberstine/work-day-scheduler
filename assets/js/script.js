@@ -56,7 +56,6 @@ if (localStorage.getItem("scheduleArray")) {
 function saveArray () {
     for (i=9; i<=17; i++) {
         scheduleArray[i] = $("#"+i).val()
-        console.log (i, scheduleArray[i],  $("#"+i).val())
     }
     localStorage.setItem("scheduleArray", JSON.stringify(scheduleArray));
 };
