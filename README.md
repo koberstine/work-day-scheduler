@@ -10,7 +10,7 @@ JavaScript, jQuery, Moment.js, Bootstrap
 https://koberstine.github.io/work-day-scheduler/
 
 ## Screenshot
-![](https://github.com/koberstine/coding-quiz/blob/main/screenshot.jpg)
+![](https://github.com/koberstine/work-day-scheduler/blob/main/screenshot.jpg)
 
 ## Contribution
 Made with ❤️ by [Chris Koberstine] All questions/answers sourced from University of Central Florida Coding Bootcamp course material
