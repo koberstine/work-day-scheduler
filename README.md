@@ -13,6 +13,6 @@ https://koberstine.github.io/work-day-scheduler/
 ![](https://github.com/koberstine/work-day-scheduler/blob/main/screenshot.jpg)
 
 ## Contribution
-Made with ❤️ by [Chris Koberstine] All questions/answers sourced from University of Central Florida Coding Bootcamp course material
+Made with ❤️ by [Chris Koberstine]
 
 ### ©️2021 Chris Koberstine
